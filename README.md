@@ -185,6 +185,16 @@ You can use the Swagger Bearer authentication by clicking `Authorize` to enter t
 
 <details>
   <br>
+  <summary>Components diagram</summary>
+
+  ![Components diagram](public/readme/components-diagram.jpg)
+
+  The components diagram illustrates the interactions between the different components of the system.
+
+</details>
+
+<details>
+  <br>
   <summary>Use Cases</summary>
 
   ![Accounts auth use cases](public/readme/use-cases/auth-use-cases.jpg)
@@ -223,6 +233,16 @@ You can use the Swagger Bearer authentication by clicking `Authorize` to enter t
   - **Get insurance percentages**: Retrieve a list of all insurance percentages.
   - **Simulate credit**: Simulate a credit.
 
+</details>
+
+<details>
+  <br>
+  <summary>Sequence diagram to disburse a credit</summary>
+
+  ![Sequence diagram](public/readme/sequence-diagram.jpg)
+
+  The sequence diagram shows the chronological flow of messages and interactions between system components during the credit disbursement process.
+  
 </details>
 
 </details>
