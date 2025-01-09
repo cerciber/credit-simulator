@@ -2,6 +2,7 @@ import { Global, Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AccountSchema } from './schemas/account.schema';
 import { AccountInfoSchema } from './schemas/account-info.schema';
+import { CreditOfferSchema } from './schemas/credit-offer.schema';
 import { CustomConfigModule } from '@src/modules/custom-config/custom-config.module';
 import { CustomConfigService } from '@src/modules/custom-config/services/custom-config.service';
 import { LoggerService } from '@src/modules/logger/services/logger.service';
@@ -13,6 +14,10 @@ const models = [
   {
     name: statics.constants.mongoose.schemas.AccountInfo,
     schema: AccountInfoSchema,
+  },
+  {
+    name: statics.constants.mongoose.schemas.CreditOffer,
+    schema: CreditOfferSchema,
   },
 ];
 

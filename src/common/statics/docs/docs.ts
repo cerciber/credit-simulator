@@ -69,6 +69,8 @@ export const docs = {
     authLogin: 'Authenticates a user and returns a JWT token.',
     authSignup: 'Registers a new user.',
     defaultNotFound: 'Returns no found response.',
+    creditOffersGetByClient: 'Returns all credit offers by client ID.',
+    creditOffersGenerate: 'Generates a new credit offer.',
   },
   statusCodes,
   httpMethods: {

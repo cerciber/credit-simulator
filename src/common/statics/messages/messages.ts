@@ -31,6 +31,11 @@ export const messages = {
     noSpecialChar: 'Password must contain at least one special character',
     noValidRol: 'Role is not valid',
   },
+  creditOffers: {
+    getByClient:
+      'All credit offers by client have been successfully retrieved.',
+    generate: 'The credit offer has been successfully generated.',
+  },
   test: {
     invalidResponseStructure: 'Invalid response structure.',
   },

@@ -38,6 +38,11 @@ async function createInfo(
     name: createAccountDto.accountInfo.name,
     email: createAccountDto.accountInfo.email,
     phone: createAccountDto.accountInfo.phone,
+    document: createAccountDto.accountInfo.document,
+    profile: createAccountDto.accountInfo.profile,
+    debtCapacityPercentage: createAccountDto.accountInfo.debtCapacityPercentage,
+    monthlyNetIncome: createAccountDto.accountInfo.monthlyNetIncome,
+    dateOfBirth: createAccountDto.accountInfo.dateOfBirth,
   });
   return accountInfo.save();
 }

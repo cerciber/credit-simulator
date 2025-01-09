@@ -104,6 +104,24 @@ const paths = {
       },
     },
   },
+  creditOffers: {
+    tag: 'Credit Offers',
+    path: '/credit-offers',
+    subpaths: {
+      creditOffersGetByClient: {
+        path: '/credit-offers/client/:_id',
+        method: RequestMethod.GET,
+        roles: [constants.roles.admin],
+        summary: docs.summaries.creditOffersGetByClient,
+      },
+      creditOffersGenerate: {
+        path: '/credit-offers/generate',
+        method: RequestMethod.POST,
+        roles: [constants.roles.admin],
+        summary: docs.summaries.creditOffersGenerate,
+      },
+    },
+  },
 };
 
 export { paths };

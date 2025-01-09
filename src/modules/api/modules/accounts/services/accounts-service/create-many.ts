@@ -43,6 +43,12 @@ async function createInfoMany(
         name: createAccountDto.accountInfo.name,
         email: createAccountDto.accountInfo.email,
         phone: createAccountDto.accountInfo.phone,
+        document: createAccountDto.accountInfo.document,
+        profile: createAccountDto.accountInfo.profile,
+        debtCapacityPercentage:
+          createAccountDto.accountInfo.debtCapacityPercentage,
+        monthlyNetIncome: createAccountDto.accountInfo.monthlyNetIncome,
+        dateOfBirth: createAccountDto.accountInfo.dateOfBirth,
       }).save(),
     ),
   );
