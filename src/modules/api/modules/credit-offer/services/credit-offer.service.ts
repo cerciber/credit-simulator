@@ -5,6 +5,7 @@ import { CreditOffer } from '@src/modules/mongo/schemas/credit-offer.schema';
 import { CreditOfferDto, CreditOfferIdDto } from '../dtos/credit-offer.dto';
 import { generateCreditOffer } from './credit-offer-services/generate-credit-offer';
 import { getCreditOffersByClient } from './credit-offer-services/get-credit-offers-by-client';
+import { getCreditOfferById } from './credit-offer-services/get-credit-offer-by-id';
 
 @Injectable()
 export class CreditOfferService {
@@ -22,5 +23,9 @@ export class CreditOfferService {
     createCreditOfferDto: CreditOfferDto,
   ): Promise<CreditOfferIdDto> {
     return generateCreditOffer(this.creditOfferModel, createCreditOfferDto);
+  }
+
+  async getCreditOfferById(_id: string): Promise<CreditOfferIdDto> {
+    return getCreditOfferById(this.creditOfferModel, _id);
   }
 }

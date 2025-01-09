@@ -71,6 +71,7 @@ export const docs = {
     defaultNotFound: 'Returns no found response.',
     creditOffersGetByClient: 'Returns all credit offers by client ID.',
     creditOffersGenerate: 'Generates a new credit offer.',
+    creditOffersGetById: 'Returns a credit offer by ID.',
   },
   statusCodes,
   httpMethods: {

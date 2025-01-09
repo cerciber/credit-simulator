@@ -18,6 +18,10 @@ import {
   generateCreditOffer,
   generateCreditOfferConfig,
 } from './credit-offer-controller/generate-credit-offer';
+import {
+  getCreditOfferById,
+  getCreditOfferByIdConfig,
+} from './credit-offer-controller/get-credit-offer-by-id';
 
 @ApiTags(statics.paths.creditOffers.tag)
 @Controller()
@@ -37,5 +41,12 @@ export class CreditOfferController {
     @Body() creditOffer: CreditOfferDto,
   ): Promise<CreditOfferResponseDto> {
     return generateCreditOffer(this.creditOfferService, creditOffer);
+  }
+
+  @EndpointConfig(getCreditOfferByIdConfig)
+  async getCreditOfferById(
+    @Param() params: IdDto,
+  ): Promise<CreditOfferResponseDto> {
+    return getCreditOfferById(this.creditOfferService, params);
   }
 }

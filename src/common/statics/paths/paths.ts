@@ -120,6 +120,12 @@ const paths = {
         roles: [constants.roles.admin],
         summary: docs.summaries.creditOffersGenerate,
       },
+      creditOffersGetById: {
+        path: '/credit-offers/:_id',
+        method: RequestMethod.GET,
+        roles: [constants.roles.admin],
+        summary: docs.summaries.creditOffersGetById,
+      },
     },
   },
 };
