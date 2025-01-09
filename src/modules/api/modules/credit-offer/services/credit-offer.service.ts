@@ -6,6 +6,7 @@ import { CreditOfferDto, CreditOfferIdDto } from '../dtos/credit-offer.dto';
 import { generateCreditOffer } from './credit-offer-services/generate-credit-offer';
 import { getCreditOffersByClient } from './credit-offer-services/get-credit-offers-by-client';
 import { getCreditOfferById } from './credit-offer-services/get-credit-offer-by-id';
+import { disableCreditOfferById } from './credit-offer-services/disable-credit-offer-by-id';
 
 @Injectable()
 export class CreditOfferService {
@@ -27,5 +28,9 @@ export class CreditOfferService {
 
   async getCreditOfferById(_id: string): Promise<CreditOfferIdDto> {
     return getCreditOfferById(this.creditOfferModel, _id);
+  }
+
+  async disableCreditOfferById(_id: string): Promise<CreditOfferIdDto> {
+    return disableCreditOfferById(this.creditOfferModel, _id);
   }
 }

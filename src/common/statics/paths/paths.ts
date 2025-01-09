@@ -126,6 +126,12 @@ const paths = {
         roles: [constants.roles.admin],
         summary: docs.summaries.creditOffersGetById,
       },
+      creditOffersDisableById: {
+        path: '/credit-offers/:_id/disable',
+        method: RequestMethod.PATCH,
+        roles: [constants.roles.admin],
+        summary: docs.summaries.creditOffersDisableById,
+      },
     },
   },
 };

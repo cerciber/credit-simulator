@@ -22,6 +22,10 @@ import {
   getCreditOfferById,
   getCreditOfferByIdConfig,
 } from './credit-offer-controller/get-credit-offer-by-id';
+import {
+  disableCreditOfferById,
+  disableCreditOfferByIdConfig,
+} from './credit-offer-controller/disable-credit-offer-by-id';
 
 @ApiTags(statics.paths.creditOffers.tag)
 @Controller()
@@ -48,5 +52,12 @@ export class CreditOfferController {
     @Param() params: IdDto,
   ): Promise<CreditOfferResponseDto> {
     return getCreditOfferById(this.creditOfferService, params);
+  }
+
+  @EndpointConfig(disableCreditOfferByIdConfig)
+  async disableCreditOfferById(
+    @Param() params: IdDto,
+  ): Promise<CreditOfferResponseDto> {
+    return disableCreditOfferById(this.creditOfferService, params);
   }
 }
