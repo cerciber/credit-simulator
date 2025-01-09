@@ -76,6 +76,12 @@ async function modelToDtoMany(
       name: createdAccountInfos[index]?.name || '',
       email: createdAccountInfos[index]?.email || '',
       phone: createdAccountInfos[index]?.phone || '',
+      document: createdAccountInfos[index]?.document || '',
+      profile: createdAccountInfos[index]?.profile || '',
+      debtCapacityPercentage:
+        createdAccountInfos[index]?.debtCapacityPercentage || 0,
+      monthlyNetIncome: createdAccountInfos[index]?.monthlyNetIncome || 0,
+      dateOfBirth: createdAccountInfos[index]?.dateOfBirth || '',
     },
   }));
 }

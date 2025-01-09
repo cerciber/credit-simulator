@@ -25,6 +25,11 @@ async function modelToDto(
           name: account.accountInfo.name,
           email: account.accountInfo.email,
           phone: account.accountInfo.phone,
+          document: account.accountInfo.document,
+          profile: account.accountInfo.profile,
+          debtCapacityPercentage: account.accountInfo.debtCapacityPercentage,
+          monthlyNetIncome: account.accountInfo.monthlyNetIncome,
+          dateOfBirth: account.accountInfo.dateOfBirth,
         }
       : undefined,
   }));

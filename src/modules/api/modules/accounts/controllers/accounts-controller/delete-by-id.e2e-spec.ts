@@ -11,9 +11,24 @@ const createAccountData: AccountDto = {
   password: global.testEnviroment.testAccountPassword,
   role: statics.constants.roles.client,
   accountInfo: {
-    email: global.testEnviroment.nonValidTestClientUser.accountInfo?.email,
-    name: global.testEnviroment.nonValidTestClientUser.accountInfo?.name,
-    phone: global.testEnviroment.nonValidTestClientUser.accountInfo?.phone,
+    email:
+      global.testEnviroment.nonValidTestClientUser.accountInfo?.email ?? '',
+    name: global.testEnviroment.nonValidTestClientUser.accountInfo?.name ?? '',
+    phone:
+      global.testEnviroment.nonValidTestClientUser.accountInfo?.phone ?? '',
+    document:
+      global.testEnviroment.nonValidTestClientUser.accountInfo?.document ?? '',
+    profile:
+      global.testEnviroment.nonValidTestClientUser.accountInfo?.profile ?? '',
+    debtCapacityPercentage:
+      global.testEnviroment.nonValidTestClientUser.accountInfo
+        ?.debtCapacityPercentage ?? 0,
+    monthlyNetIncome:
+      global.testEnviroment.nonValidTestClientUser.accountInfo
+        ?.monthlyNetIncome ?? 0,
+    dateOfBirth:
+      global.testEnviroment.nonValidTestClientUser.accountInfo?.dateOfBirth ??
+      '',
   },
 };
 let createdAccount: AccountIdNoPasswordDto;

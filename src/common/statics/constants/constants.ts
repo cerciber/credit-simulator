@@ -43,4 +43,10 @@ export const constants = {
       AccountInfo: 'AccountInfo',
     },
   },
+  profiles: {
+    aaa: 'AAA',
+    aa: 'AA',
+    a: 'A',
+    baa: 'BAA',
+  },
 };

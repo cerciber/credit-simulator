@@ -6,6 +6,7 @@ import { validateDto } from '../utils/validate-dto';
 
 async function generateAccounData(): Promise<AccountDto[]> {
   const accounts = [];
+  const profiles = Object.values(statics.constants.profiles);
   for (let i = 1; i <= 10; i++) {
     accounts.push({
       username: `admin_${i}`,
@@ -15,6 +16,11 @@ async function generateAccounData(): Promise<AccountDto[]> {
         name: `Admin ${i}`,
         email: `admin_${i}@example.com`,
         phone: `+57320213812${i - 1}`,
+        document: `1234567890${i - 1}`,
+        profile: profiles[i % profiles.length] as string,
+        debtCapacityPercentage: 10,
+        monthlyNetIncome: 1000000,
+        dateOfBirth: '1990-01-01',
       },
     });
   }

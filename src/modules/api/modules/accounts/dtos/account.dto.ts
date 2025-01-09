@@ -28,11 +28,11 @@ export const AccountNames = {
 export class AccountIdDto {
   @IsMongoId()
   @IsNotEmpty()
-  _id: string = '';
+  _id: string;
 
   @IsString()
   @IsNotEmpty()
-  username: string = '';
+  username: string;
 
   @IsString()
   @IsNotEmpty()
@@ -53,12 +53,12 @@ export class AccountIdDto {
   @Matches(/(?=.*[!@#$%^&*(),.?":{}|<>])/, {
     message: statics.messages.accounts.noSpecialChar,
   })
-  password: string = '';
+  password: string;
 
   @IsString()
   @IsNotEmpty()
   @IsIn(Object.values(statics.constants.roles))
-  role: string = '';
+  role: string;
 
   @ValidateNested()
   @Type(() => AccountInfoIdDto)
@@ -71,7 +71,7 @@ export class AccountDto extends OmitType(AccountIdDto, [
 ]) {
   @ValidateNested()
   @Type(() => AccountInfoNoAccountDto)
-  accountInfo: AccountInfoNoAccountDto = new AccountInfoNoAccountDto();
+  accountInfo: AccountInfoNoAccountDto;
 }
 
 export class PartialAccountDto extends OmitType(PartialType(AccountDto), [

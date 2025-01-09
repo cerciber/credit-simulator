@@ -7,6 +7,7 @@ export class DTOsService {
     return new ValidationPipe({
       whitelist: statics.constants.validations.whitelist,
       forbidNonWhitelisted: statics.constants.validations.forbidNonWhitelisted,
+      skipMissingProperties: true,
     });
   }
 }

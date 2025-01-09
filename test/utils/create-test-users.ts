@@ -22,6 +22,11 @@ export async function createValidTestAdminUser(
       name: `Test Admin 1`,
       email: `test_admin_1@example.com`,
       phone: `+573202138120`,
+      document: `1234567890`,
+      profile: statics.constants.profiles.aaa,
+      debtCapacityPercentage: 10,
+      monthlyNetIncome: 1000000,
+      dateOfBirth: '1990-01-01',
     },
   });
   return account;
@@ -41,6 +46,11 @@ export async function createNonValidTestAdminUser(
       name: `Test Admin Invalid 1`,
       email: `test_admin_invalid_1@example.com`,
       phone: `+573202138121`,
+      document: `1234567890`,
+      profile: statics.constants.profiles.aaa,
+      debtCapacityPercentage: 10,
+      monthlyNetIncome: 1000000,
+      dateOfBirth: '1990-01-01',
     },
   };
   try {
@@ -70,6 +80,11 @@ export async function createValidTestClientUser(
       name: `Test Client 1`,
       email: `test_client_1@example.com`,
       phone: `+573202138130`,
+      document: `1234567890`,
+      profile: statics.constants.profiles.aaa,
+      debtCapacityPercentage: 10,
+      monthlyNetIncome: 1000000,
+      dateOfBirth: '1990-01-01',
     },
   });
   return account;
@@ -89,6 +104,11 @@ export async function createNonValidTestClientUser(
       name: `Test Client Invalid 1`,
       email: `test_client_invalid_1@example.com`,
       phone: `+573202138131`,
+      document: `1234567890`,
+      profile: statics.constants.profiles.aaa,
+      debtCapacityPercentage: 10,
+      monthlyNetIncome: 1000000,
+      dateOfBirth: '1990-01-01',
     },
   };
   try {

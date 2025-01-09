@@ -1,13 +1,18 @@
 import { OmitType, PartialType } from '@nestjs/swagger';
 import {
   IsEmail,
+  IsEnum,
   IsMongoId,
   IsNotEmpty,
+  IsNumber,
   IsOptional,
   IsPhoneNumber,
   IsString,
+  Max,
+  Min,
   MinLength,
 } from 'class-validator';
+import { statics } from '@src/common/statics/statics';
 
 const AccountInfoNames = {
   _id: '_id',
@@ -17,28 +22,47 @@ const AccountInfoNames = {
 export class AccountInfoIdDto {
   @IsMongoId()
   @IsNotEmpty()
-  _id: string = '';
+  _id: string;
 
   @IsMongoId()
   @IsNotEmpty()
-  account: string = '';
+  account: string;
 
   @IsOptional()
   @IsString()
   @MinLength(1)
-  name?: string = '';
+  name?: string;
 
-  @IsOptional()
   @IsString()
-  @MinLength(1)
   @IsEmail()
-  email?: string = '';
+  email: string;
 
   @IsOptional()
   @IsString()
   @MinLength(1)
   @IsPhoneNumber()
-  phone?: string = '';
+  phone?: string;
+
+  @IsString()
+  @MinLength(1)
+  document: string;
+
+  @IsString()
+  @MinLength(1)
+  @IsEnum(statics.constants.profiles)
+  profile: string;
+
+  @IsNumber()
+  @Min(0)
+  @Max(100)
+  debtCapacityPercentage: number;
+
+  @IsNumber()
+  @Min(0)
+  monthlyNetIncome: number;
+
+  @IsString()
+  dateOfBirth: string;
 }
 
 class AccountInfoDto extends OmitType(AccountInfoIdDto, [
