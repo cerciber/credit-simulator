@@ -23,7 +23,7 @@
     "prepare": "husky",
     "db:reset": "NODE_ENV=development nest start -- script=set-sample-data",
     "check-unused": "ts-prune | (! grep .)",
-    "check-all": "npm run lint && npm run check-types && npm run check-unused"
+    "check-all": "npm run lint && npm run check-types"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",

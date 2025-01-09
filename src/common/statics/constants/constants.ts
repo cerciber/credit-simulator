@@ -41,6 +41,7 @@ export const constants = {
     schemas: {
       Account: 'Account',
       AccountInfo: 'AccountInfo',
+      CreditOffer: 'CreditOffer',
     },
   },
   profiles: {
@@ -48,5 +49,19 @@ export const constants = {
     aa: 'AA',
     a: 'A',
     baa: 'BAA',
+  },
+  creditOffer: {
+    statuses: {
+      active: 'ACTIVE',
+      inactive: 'INACTIVE',
+      disbursed: 'DISBURSED',
+    },
+    periods: {
+      twelveMonths: 12,
+      twentyFourMonths: 24,
+      thirtySixMonths: 36,
+      fortyEightMonths: 48,
+      sixtyMonths: 60,
+    },
   },
 };
