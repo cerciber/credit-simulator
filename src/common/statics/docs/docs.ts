@@ -78,6 +78,7 @@ export const docs = {
     creditSimulationSimulate: 'Simulates a credit offer.',
     creditSimulationGetInsuranceRates: 'Returns the insurance rates.',
     creditSimulationGetInterestRates: 'Returns the interest rates.',
+    creditSimulationGetValidPeriods: 'Returns the valid periods.',
   },
   statusCodes,
   httpMethods: {

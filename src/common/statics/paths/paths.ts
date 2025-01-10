@@ -168,6 +168,12 @@ const paths = {
         roles: [constants.roles.admin, constants.roles.client],
         summary: docs.summaries.creditSimulationGetInterestRates,
       },
+      creditSimulationGetValidPeriods: {
+        path: '/credit-simulation/valid-periods',
+        method: RequestMethod.POST,
+        roles: [constants.roles.admin, constants.roles.client],
+        summary: docs.summaries.creditSimulationGetValidPeriods,
+      },
     },
   },
 };

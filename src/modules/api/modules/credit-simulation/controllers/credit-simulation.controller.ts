@@ -19,6 +19,11 @@ import {
 import { InterestRatesResponseDto } from '../dtos/interest-rates-response.dto';
 import { InsuranceRatesResponseDto } from '../dtos/insurance-rates-response.dto';
 import { SimulationResultResponseDto } from '../dtos/simulate-credit-respone.dto';
+import {
+  getValidPeriods,
+  getValidPeriodsConfig,
+} from './credit-simulation-controller/get-valid-periods';
+import { ValidPeriodsResponseDto } from '../dtos/valid-periods-response.dto';
 
 @ApiTags(statics.paths.creditSimulation.tag)
 @Controller()
@@ -42,5 +47,12 @@ export class CreditSimulationController {
   @EndpointConfig(getInsuranceRatesConfig)
   getInsuranceRates(): InsuranceRatesResponseDto {
     return getInsuranceRates(this.creditSimulationService);
+  }
+
+  @EndpointConfig(getValidPeriodsConfig)
+  async getValidPeriods(
+    @Body() simulateCreditDto: SimulateCreditDto,
+  ): Promise<ValidPeriodsResponseDto> {
+    return getValidPeriods(this.creditSimulationService, simulateCreditDto);
   }
 }
