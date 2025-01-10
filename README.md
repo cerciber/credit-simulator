@@ -1,17 +1,23 @@
-# Credit simulator
+# Credit simulator API
 
-System to manage credit simulations and credit offers.
+System to manage credit simulations and credit offers. You can explore the sequence diagram below to understand the implemented credit disbursement process, which includes credit simulation, offer creation, and acceptance flow.
 
 <details>
   <summary><b>Demo</b></summary>
 <br>
 
-You can try out a demo of the API [here](https://demo-url-to-change/docs).
+You can try out a demo of the API [here](https://continued-petronella-adoptame-53ba5f62.koyeb.app/docs).
 
 To access the demo, use `/auth/login` with the following credentials:
 ```json
 {
-  "username": "admin__1",
+  "username": "admin",
+  "password": "ABC#abc#123"
+}
+```
+```json
+{
+  "username": "client_1",
   "password": "ABC#abc#123"
 }
 ```
