@@ -132,6 +132,12 @@ const paths = {
         roles: [constants.roles.admin],
         summary: docs.summaries.creditOffersDisableById,
       },
+      creditOffersGetMy: {
+        path: '/credit-offers/my',
+        method: RequestMethod.GET,
+        roles: [constants.roles.admin, constants.roles.client],
+        summary: docs.summaries.creditOffersGetMy,
+      },
     },
   },
 };

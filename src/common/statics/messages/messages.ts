@@ -38,6 +38,7 @@ export const messages = {
     getById: 'The credit offer has been successfully retrieved.',
     notFound: 'Oops! No credit offer was found.',
     disableById: 'The credit offer has been successfully disabled.',
+    getMy: 'All your credit offers have been successfully retrieved.',
   },
   test: {
     invalidResponseStructure: 'Invalid response structure.',

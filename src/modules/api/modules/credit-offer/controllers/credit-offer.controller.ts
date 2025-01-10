@@ -1,4 +1,4 @@
-import { Body, Controller, HttpCode, Param } from '@nestjs/common';
+import { Body, Controller, HttpCode, Param, Req } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { statics } from '@src/common/statics/statics';
 import { HttpStatus } from '@nestjs/common';
@@ -26,6 +26,11 @@ import {
   disableCreditOfferById,
   disableCreditOfferByIdConfig,
 } from './credit-offer-controller/disable-credit-offer-by-id';
+import { Request } from 'express';
+import {
+  getMyCreditOffers,
+  getMyCreditOffersConfig,
+} from './credit-offer-controller/get-my-credit-offers';
 
 @ApiTags(statics.paths.creditOffers.tag)
 @Controller()
@@ -45,6 +50,13 @@ export class CreditOfferController {
     @Body() creditOffer: CreditOfferDto,
   ): Promise<CreditOfferResponseDto> {
     return generateCreditOffer(this.creditOfferService, creditOffer);
+  }
+
+  @EndpointConfig(getMyCreditOffersConfig)
+  async getMyCreditOffers(
+    @Req() request: Request,
+  ): Promise<CreditOffersResponseDto> {
+    return getMyCreditOffers(this.creditOfferService, request);
   }
 
   @EndpointConfig(getCreditOfferByIdConfig)
