@@ -49,7 +49,7 @@ export class AccountInfoIdDto {
 
   @IsString()
   @MinLength(1)
-  @IsEnum(statics.constants.profiles)
+  @IsEnum(Object.values(statics.constants.profiles).map((p) => p.name))
   profile: string;
 
   @IsNumber()

@@ -146,6 +146,18 @@ const paths = {
       },
     },
   },
+  creditSimulation: {
+    tag: 'Credit Simulation',
+    path: '/credit-simulation',
+    subpaths: {
+      creditSimulationSimulate: {
+        path: '/credit-simulation/simulate',
+        method: RequestMethod.POST,
+        roles: [constants.roles.admin, constants.roles.client],
+        summary: docs.summaries.creditSimulationSimulate,
+      },
+    },
+  },
 };
 
 export { paths };

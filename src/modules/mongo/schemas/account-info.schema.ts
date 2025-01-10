@@ -45,7 +45,7 @@ export class AccountInfo extends Document<Types.ObjectId> {
 
   @Prop({
     type: String,
-    enum: Object.values(statics.constants.profiles),
+    enum: Object.values(statics.constants.profiles).map((p) => p.name),
   })
   profile: string = '';
 

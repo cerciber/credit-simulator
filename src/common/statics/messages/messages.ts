@@ -40,6 +40,12 @@ export const messages = {
     disableById: 'The credit offer has been successfully disabled.',
     getMy: 'All your credit offers have been successfully retrieved.',
     acceptMy: 'The credit offer has been successfully accepted.',
+    invalidProfile: 'The profile is not valid.',
+    invalidInsurance: 'The insurance is not valid.',
+    invalidAmount: 'The amount is not valid.',
+  },
+  creditSimulation: {
+    simulate: 'The credit simulation has been successfully performed.',
   },
   test: {
     invalidResponseStructure: 'Invalid response structure.',
