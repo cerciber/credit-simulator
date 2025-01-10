@@ -156,6 +156,18 @@ const paths = {
         roles: [constants.roles.admin, constants.roles.client],
         summary: docs.summaries.creditSimulationSimulate,
       },
+      creditSimulationGetInsuranceRates: {
+        path: '/credit-simulation/insurance-rates',
+        method: RequestMethod.GET,
+        roles: [constants.roles.admin, constants.roles.client],
+        summary: docs.summaries.creditSimulationGetInsuranceRates,
+      },
+      creditSimulationGetInterestRates: {
+        path: '/credit-simulation/interest-rates',
+        method: RequestMethod.GET,
+        roles: [constants.roles.admin, constants.roles.client],
+        summary: docs.summaries.creditSimulationGetInterestRates,
+      },
     },
   },
 };

@@ -76,6 +76,8 @@ export const docs = {
     creditOffersGetMy: 'Returns all credit offers by client ID.',
     creditOffersAcceptMy: 'Accepts a credit offer by ID.',
     creditSimulationSimulate: 'Simulates a credit offer.',
+    creditSimulationGetInsuranceRates: 'Returns the insurance rates.',
+    creditSimulationGetInterestRates: 'Returns the interest rates.',
   },
   statusCodes,
   httpMethods: {

@@ -8,6 +8,16 @@ import {
   simulateCredit,
   simulateCreditConfig,
 } from './credit-simulation-controller/simulate-credit';
+import {
+  getInterestRates,
+  getInterestRatesConfig,
+} from './credit-simulation-controller/get-interest-rates';
+import {
+  getInsuranceRates,
+  getInsuranceRatesConfig,
+} from './credit-simulation-controller/get-insurance-rates';
+import { InterestRatesResponseDto } from '../dtos/interest-rates-response.dto';
+import { InsuranceRatesResponseDto } from '../dtos/insurance-rates-response.dto';
 import { SimulationResultResponseDto } from '../dtos/simulate-credit-respone.dto';
 
 @ApiTags(statics.paths.creditSimulation.tag)
@@ -22,5 +32,15 @@ export class CreditSimulationController {
     @Body() simulateCreditDto: SimulateCreditDto,
   ): Promise<SimulationResultResponseDto> {
     return simulateCredit(this.creditSimulationService, simulateCreditDto);
+  }
+
+  @EndpointConfig(getInterestRatesConfig)
+  getInterestRates(): InterestRatesResponseDto {
+    return getInterestRates(this.creditSimulationService);
+  }
+
+  @EndpointConfig(getInsuranceRatesConfig)
+  getInsuranceRates(): InsuranceRatesResponseDto {
+    return getInsuranceRates(this.creditSimulationService);
   }
 }

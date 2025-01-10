@@ -6,6 +6,10 @@ import { Account } from '@src/modules/mongo/schemas/account.schema';
 import { SimulateCreditDto } from '../dtos/simulate-credit.dto';
 import { SimulationResultDto } from '../dtos/simulate-credit-result.dto';
 import { simulateCredit } from './credit-simulation-services/simulate-credit';
+import { getInterestRates } from './credit-simulation-services/get-interest-rates';
+import { getInsuranceRates } from './credit-simulation-services/get-insurance-rates';
+import { InterestRatesDto } from '../dtos/interest-rates.dto';
+import { InsuranceRatesDto } from '../dtos/insurance-rates.dto';
 
 @Injectable()
 export class CreditSimulationService {
@@ -22,5 +26,13 @@ export class CreditSimulationService {
       this.accountModel,
       simulateCreditDto,
     );
+  }
+
+  getInterestRates(): InterestRatesDto {
+    return getInterestRates();
+  }
+
+  getInsuranceRates(): InsuranceRatesDto {
+    return getInsuranceRates();
   }
 }

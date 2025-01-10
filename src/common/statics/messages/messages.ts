@@ -46,6 +46,8 @@ export const messages = {
   },
   creditSimulation: {
     simulate: 'The credit simulation has been successfully performed.',
+    getInsuranceRates: 'The insurance rates have been successfully retrieved.',
+    getInterestRates: 'The interest rates have been successfully retrieved.',
   },
   test: {
     invalidResponseStructure: 'Invalid response structure.',
