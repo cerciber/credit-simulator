@@ -8,6 +8,7 @@ import { getCreditOffersByClient } from './credit-offer-services/get-credit-offe
 import { getCreditOfferById } from './credit-offer-services/get-credit-offer-by-id';
 import { disableCreditOfferById } from './credit-offer-services/disable-credit-offer-by-id';
 import { getMyCreditOffers } from './credit-offer-services/get-my-credit-offers';
+import { acceptMyCreditOfferById } from './credit-offer-services/accept-my-credit-offers-by-id';
 
 @Injectable()
 export class CreditOfferService {
@@ -37,5 +38,12 @@ export class CreditOfferService {
 
   async getMyCreditOffers(accountId: string): Promise<CreditOfferIdDto[]> {
     return getMyCreditOffers(this.creditOfferModel, accountId);
+  }
+
+  async acceptMyCreditOfferById(
+    _id: string,
+    accountId: string,
+  ): Promise<CreditOfferIdDto> {
+    return acceptMyCreditOfferById(this.creditOfferModel, _id, accountId);
   }
 }

@@ -74,6 +74,7 @@ export const docs = {
     creditOffersGetById: 'Returns a credit offer by ID.',
     creditOffersDisableById: 'Disables a credit offer by ID.',
     creditOffersGetMy: 'Returns all credit offers by client ID.',
+    creditOffersAcceptMy: 'Accepts a credit offer by ID.',
   },
   statusCodes,
   httpMethods: {

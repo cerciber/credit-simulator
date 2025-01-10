@@ -31,6 +31,10 @@ import {
   getMyCreditOffers,
   getMyCreditOffersConfig,
 } from './credit-offer-controller/get-my-credit-offers';
+import {
+  acceptMyCreditOfferById,
+  acceptMyCreditOfferByIdConfig,
+} from './credit-offer-controller/accept-my-credit-offer-by-id';
 
 @ApiTags(statics.paths.creditOffers.tag)
 @Controller()
@@ -71,5 +75,13 @@ export class CreditOfferController {
     @Param() params: IdDto,
   ): Promise<CreditOfferResponseDto> {
     return disableCreditOfferById(this.creditOfferService, params);
+  }
+
+  @EndpointConfig(acceptMyCreditOfferByIdConfig)
+  async acceptMyCreditOfferById(
+    @Param() params: IdDto,
+    @Req() request: Request,
+  ): Promise<CreditOfferResponseDto> {
+    return acceptMyCreditOfferById(this.creditOfferService, params, request);
   }
 }

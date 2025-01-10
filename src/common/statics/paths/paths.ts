@@ -138,6 +138,12 @@ const paths = {
         roles: [constants.roles.admin, constants.roles.client],
         summary: docs.summaries.creditOffersGetMy,
       },
+      creditOffersAcceptMy: {
+        path: '/credit-offers/my/:_id/accept',
+        method: RequestMethod.PATCH,
+        roles: [constants.roles.admin, constants.roles.client],
+        summary: docs.summaries.creditOffersAcceptMy,
+      },
     },
   },
 };
